@@ -1,18 +1,10 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-  border: none;
-  list-style: none;
-}
-
 .page {
   min-width: 1100px;
   max-width: 1600px;
   margin: 0 auto;
   font-family: 'Helvetica Neue', Arial, sans-serif;
-  border: 1px solid black;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .logo {
@@ -30,8 +22,7 @@
   position: relative;
   display: flex;
   margin-bottom: 100px;
-  border: 1px solid black;
-  border-top: none;
+  box-sizing: border-box;
 }
 
 .logo_place_header {
@@ -51,7 +42,7 @@
 }
 
 .header__subtitle {
-  width: 388px;
+  max-width: 388px;
   position: absolute;
   left: 64px;
   bottom: 30px;
@@ -59,6 +50,11 @@
   font-weight: normal;
   font-size: 18px;
   z-index: 2;
+}
+
+.header__link {
+  color: #2f80ed;
+  text-decoration: none;
 }
 
 .header__main-illustration {
@@ -83,7 +79,6 @@
 /*description*/
 
 .description {
-  border: 1px solid black;
   display: flex;
   justify-content: space-around;
   margin-bottom: 100px;
@@ -125,7 +120,6 @@
 
 .digits {
   margin-bottom: 100px;
-  border: 1px solid black;
 }
 
 .section-title {
@@ -152,6 +146,7 @@
   margin: 0 auto;
   flex-wrap: wrap;
   justify-content: space-between;
+  list-style: none;
 }
 
 .table__cell {
@@ -184,10 +179,10 @@
 
 .feynman {
   position: relative;
-  height: 890px;
+  min-height: 890px;
   background-color: #f2f2f2;
-  border: 1px solid black;
   padding-top: 100px;
+  box-sizing: border-box;
 }
 
 .feynman__title {
@@ -220,6 +215,7 @@
   right: 48px;
   color: #2f80ed;
   z-index: 1;
+  text-decoration: none;
 }
 
 .feynman__poster {
@@ -238,13 +234,9 @@
   background-color: #1f1f1f;
   padding: 90px 0;
   overflow: hidden;
-  border: 1px solid white;
+  box-sizing: border-box;
 }
-.kaufman__bordered {
-  position: relative;
-  z-index: 1;
-  border: 1px solid white;
-}
+
 .table_theme_dark {
   margin-top: 0;
   position: relative;
@@ -253,18 +245,18 @@
 .table__cell_theme_dark {
   width: 200px;
   padding-top: 0;
-  color: white;
+  color: #fff;
   margin-right: 0;
   margin-top: 80px;
 }
 
 .section-title_theme_dark {
-  color: white;
+  color: #fff;
   margin-bottom: 20px;
 }
 
 .section-subtitle_theme-dark {
-  color: white;
+  color: #fff;
 }
 
 .kaufman__triangle {
@@ -283,15 +275,8 @@
   position: relative;
   background-color: #1f1f1f;
   padding: 60px 0 40px;
-  border: 1px solid white;
-  border-top: none;
   min-height: 350px;
-}
-
-.footer__bordered {
-  border: 1px solid white;
-  display: flex;
-  min-height: 350px;
+  box-sizing: border-box;
 }
 
 .footer__columns {
@@ -303,20 +288,22 @@
 }
 
 .footer__author {
-  position: absolute;
-  bottom: 18px;
-  left: 0;
   line-height: 25px;
   font-size: 18px;
   font-weight: normal;
+  margin: 18px 0;
 }
 
 .footer__column_content_copyright {
   flex-basis: 711px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 250px;
 }
 
 .footer__column_content_copyright, .footer__column_content_info, .footer__column_content_social {
-  color: white;
+  color: #fff;
 }
 
 
@@ -328,9 +315,15 @@
 }
 
 .footer__column_links a {
-  color: white;
+  color: #fff;
   line-height: 30px;
   font-size: 18px;
+  text-decoration: none;
+}
+
+.footer__column_links {
+  list-style: none;
+  padding: 0;
 }
 
 .footer__column_link a:hover {
@@ -339,10 +332,4 @@
 
 .footer__social_icon {
   margin-right: 10px;
-}
-
-/*пришлось ввести такой класс, чтобы убрать слишком большие границы по бокам секций*/
-.border-sides-none {
-  border-left: none;
-  border-right: none;
 }
