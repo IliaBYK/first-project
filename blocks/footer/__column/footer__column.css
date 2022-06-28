@@ -1,0 +1,10 @@
+.footer__column {
+  padding: 0;
+  min-height: 250px;
+}
+
+.footer__column:first-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

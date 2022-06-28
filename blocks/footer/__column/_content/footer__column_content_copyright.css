@@ -1,7 +1,3 @@
 .footer__column_content_copyright {
-  min-height: 250px;
   flex-basis: 711px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
